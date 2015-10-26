@@ -1,0 +1,40 @@
+AllCops:
+  Include:
+    - '**/Guardfile'
+    - '**/Rakefile'
+    - '**/config.ru'
+    - app/views/**/*.rabl
+    - lib/**/*
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+    - features/support/env.rb
+    - features/support/mocks.rb
+    - lib/tasks/ci.rake
+    - lib/tasks/cucumber.rake
+    - lib/tasks/test_data.rake
+    - script/**/*
+    - spec/*_helper.rb
+  RunRailsCops: true
+
+AbcSize:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+LambdaCall:
+  Enabled: false
+
+MethodLength:
+  Max: 15
+
+RaiseArgs:
+  Enabled: false
