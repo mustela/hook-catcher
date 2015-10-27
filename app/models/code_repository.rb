@@ -1,14 +1,8 @@
 module CodeRepository
   class << self
     def track(event)
-      tracked_event = ''
-      [:issue].each do |event_type|
-        if event.include?(event_type.to_s)
-          tracked_event = send(event_type, event)
-          break
-        end
-      end
-      tracked_event
+      return unless event.include?(:issue.to_s)
+      issue(event)
     end
 
     private
